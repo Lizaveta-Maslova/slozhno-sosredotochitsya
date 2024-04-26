@@ -9,4 +9,9 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --main-font: "IBM Plex Mono", monospace, sans-serif;
+  --bg-color: rgb(255, 241, 247);
+  --text-color: rgb(53, 52, 48);
+  --accent-color: rgb(255, 141, 203);
+  --heading-color: rgb(255, 194, 230);
 }
