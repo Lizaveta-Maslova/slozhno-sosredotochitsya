@@ -4,13 +4,11 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   inline-size: 100%;
   max-inline-size: 668px;
-  /* margin: auto; надо или нет?*/
-  color:var(--text-color);
+  color: var(--text-color);
   font-weight: 400;
 }
 
-
-.header {
+header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   min-height: 648px;
@@ -19,12 +17,11 @@
 }
 
 /* ul в header, стилизация навигации*/
+
 .header__theme-menu-list {
-  text-align: right;         /*навигация справа*/
-  padding: 66.5px 0 66.5px;  /*отступы от навигации*/
+  text-align: right;
+  padding: 66.5px 0 66.5px;
 }
-
-
 
 .header-rec {
   display: inline-flex;
@@ -55,6 +52,7 @@
 }
 
 /*навигация в хедере*/
+
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
@@ -125,6 +123,18 @@
   font-size: 18px;
 }
 
+.why-heading {
+  margin-block-end: 20px;
+}
+
+.why-text {
+  margin-block-end: 20px;
+}
+
+.reason-heading {
+  margin-block-end: 20px;
+}
+
 .heading-2 {
   font-weight: 400;
   color: rgba(53, 52, 48, 1);
@@ -188,6 +198,7 @@ img {
 }
 
 /* -------------------------------------------- */
+
 @media (min-width: 768px) {
   .page {
     max-inline-size: 1024px;
@@ -245,6 +256,8 @@ img {
     grid-column: span 2;
   }
 }
+
+/* ------------------------------------- */
 
 @media (min-width: 1024px) {
   .page {
