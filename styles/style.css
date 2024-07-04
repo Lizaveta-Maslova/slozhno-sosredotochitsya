@@ -1,105 +1,436 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой, здесь же писать медиавыажения для адаптива под разные экраны */
 
-.page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  width: 375px;
+:root {
+  --accent-color: #ff0070;
+  --accent-clr-with-background: #000028;
+  --accent-heading-clr: #db00ff;
+  --text-color: #f1b2ce;
+  --heading-color: #ff0070;
+  --button-hover-color: #ff007066;
+  --decorative-bracket-color: #ff0070;
+  --menu-color: #ff0070;
+  --headers-color: #ff0070;
+  --rec-decoration-color: #ff0070;
+  --accent-clr: #ff8dcb;
+  --accent-clr-with-background: #353430;
+  --accent-heading-clr: #ffc2e6;
+  --text-clr: #353430;
+  --button-hover-clr: #32312d66;
+  --decorative-bracket-clr: #353430;
+  --menu-clr: #353430;
+  --rec-decoration-clr: transparent;
+  --heading-clr: #353430;
+
+  --rec-color: rgb(255, 0,112);
+  --decoration-color: rgb(255, 0,112);
+  --main-font: "IBM Plex mono";
+  --header-menu: rgb(53,52,48);
+  --visibility: hidden;
+  --section-text: rgb(53, 52,48);
+  --heading-background: rgb(255, 141, 203);
+  --title-color: rgb(255, 194, 230);
+  --text-shadow: rgb(255, 0, 112);
+  --background-image: url(../images/cover-image-light.png);
+  --main-title: rgb(53, 52, 48);
+  --heading-color: rgb(53, 52, 48);
 }
 
-header,
-footer {
-  height: 100vh;
-  min-height: 668px;
+.page {
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.content-section {
+  background-image: var(--background-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header,
+.footer {
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .header {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+
+.rec {
+  color: var(--rec-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+  visibility: var(--visibility);
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.rec::before {
+  position: absolute;
+  content: "rec";
+  top: 10px;
+  right: 38px;
+}
+
+.rec::after {
+  position: absolute;
+  display: block;
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  border: 1px solid var(--decoration-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--decoration-color);
+  background: var(--decoration-color);
+  top: 18px;
+  right: 19px;
 }
 
 .header__theme-menu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-end;
 }
 
 .header p {
-  display: flex;
-  justify-content: center;
-  color: rgb(53, 52, 48);
-  font-family: "IBM Plex Mono";
+  color: var(--heading-color);
+  font-family: var(--main-font);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
-  text-align: left;
-  background: rgb(255, 141, 203);
-  height: 55%;
+  background: var(--heading-background);
+  display: block;
+  justify-self: end;
 }
 
-.header button {
-  color: rgb(53, 52, 48);
-  font-family: "IBM Plex Mono";
+.header__theme-menu-button {
+  color: var(--header-menu);
+  font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
   cursor: pointer;
   text-transform: lowercase;
-  padding: 0 13px;
-  border: 1px solid rgb(53, 52, 48);
+  padding: 2px 13px;
+  border: none;
   background: transparent;
+  text-align: center;
 }
 
 .header button:hover {
   border: none;
-  outline: 1px solid rgba(255, 0, 112, 0.4);
-  color: rgb(255, 0, 112);
+  outline: 1px solid var(--header-menu);
+  color: var(--header-menu);
 }
 
 .header button:focus {
   border: none;
   outline: none;
-  border-bottom: 1px solid rgb(255, 0, 112);
+  border-block-end: 1px solid var(--header-menu);
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 11.5px;
+  gap: 10px;
 }
 
 .decorated-zone::before {
   position: absolute;
   content: "";
-  border-top: 1px solid rgb(53, 52, 48);
-  border-right: 1px solid rgb(53, 52, 48);
-  width: 25px;
-  height: 25px;
-  justify-self: flex-end;
+  border-block-start: 1px solid var(--header-menu);
+  border-inline-end: 1px solid var(--header-menu);
+  inline-size: 25px;
+  block-size: 25px;
+  top: 10px;
+  right: 10px;
 }
 
 .decorated-zone::after {
   position: absolute;
   content: "";
-  border-bottom: 1px solid rgb(53, 52, 48);
-  border-left: 1px solid rgb(53, 52, 48);
-  width: 25px;
-  height: 25px;
-  align-self: end;
+  border-block-end: 1px solid var(--header-menu);
+  border-inline-start: 1px solid var(--header-menu);
+  inline-size: 25px;
+  block-size: 25px;
+  left: 10px;
+  bottom: 10px;
 }
 
-.content-section {
-  background-image: url(../images/cover-image-light.png);
-}
-
-.header {
-  padding: 10px;
-}
-
-.header h1 {
-  font-family: "IBM Plex Mono";
+.title {
+  font-family: var(--main-font);
   font-size: 116px;
-  color: rgb(255, 194, 230);
+  color: var(--title-color);
   font-weight: 700;
   line-height: 82.5%;
-  text-shadow: 4px 4px 0 rgb(255, 141, 203);
+  text-shadow: 4px 4px 0 var(--text-shadow);
+}
+
+.why {
+  padding: 40px 10px 50px;
+}
+
+.why h2 {
+  margin-block-end: 20px;
+  background: none;
+  color: var(--main-title);
+}
+
+.why li h3 {
+  display: block;
+  background-color: var(--heading-background);
+  margin-block-end: 10px;
+}
+
+.heading {
+  color: var(--heading-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  display: block;
+  background: var(--heading-background);
+}
+
+.why ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why a {
+  text-shadow: 1px 2px 0 var(--text-shadow);
+  text-decoration: none;
+}
+
+.why a:hover {
+  text-decoration: underline rgb(53, 52, 48);
+}
+
+.why a:focus {
+  outline: 1px solid rgb(53, 52, 48);
+}
+
+.reasons {
+  padding: 0 10px 50px;
+}
+
+.reasons h2 {
+  margin-block-end: 20px;
+  background: none;
+  color: var(--main-title);
+}
+
+.reasons li h3 {
+  display: block;
+  background-color: var(--heading-background);
+  margin-block-end: 10px;
+}
+
+.reasons ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-text {
+  color: var(--section-text);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+}
+
+.advices {
+  padding: 0 10px 50px;
+}
+
+.heading-advices {
+  margin-block-end: 20px;
+  background: none;
+}
+
+.advices ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.advices h2 {
+  margin-block-end: 20px;
+  color: var(--main-title);
+}
+
+.advices h3 {
+  margin-block-end: 10px;
+}
+
+.gallery {
+  padding: 0 10px 40px;
+}
+
+.photo-grid img {
+  max-inline-size: 100%;
+}
+
+.photo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery h2 {
+  margin-block-end: 10px;
+}
+
+.footer {
+  padding: 10px;
+  position: relative;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .header p {
+    inline-size: 364px;
+    min-block-size: 117x;
+  }
+
+  .title {
+    font-size: 120px;
+  }
+
+  .why {
+    display: flex;
+    gap: 20px;
+    padding: 60px 20px 80px;
+  }
+
+  .why h2 {
+    inline-size: 236px;
+    min-block-size: 71px;
+  }
+
+  .reasons h2 {
+    inline-size: 236px;
+    min-block-size: 70px;
+  }
+
+  .reasons {
+    padding: 0 20px 80px;
+  }
+
+  .advices {
+    padding: 0 20px 80px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .advices h2 {
+    inline-size: 236px;
+    min-block-size: 80px;
+  }
+
+  .advices .div {
+    inline-size: 472px;
+    min-block-size: 141px;
+  }
+
+  .gallery {
+    padding: 0 20px 60px;
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    max-inline-size: 100%;
+    max-block-size: 100vh;
+    object-fit: cover;
+  }
+
+  img:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  img:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 100%;
+  }
+
+  img:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    height: 100%;
+  }
+
+  img:nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  img:nth-child(5) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: flex-start;
+    margin: 0;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header p {
+    inline-size: 491px;
+    min-block-size: 71px;
+  }
+
+  .title {
+    font-size: 157px;
+  }
+
+  .reasons ul {
+    display: flex;
+    flex-direction: row;
+  }
 }
