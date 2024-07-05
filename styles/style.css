@@ -1,32 +1,12 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой, здесь же писать медиавыажения для адаптива под разные экраны */
 
 :root {
-  --accent-color: #ff0070;
-  --accent-clr-with-background: #000028;
-  --accent-heading-clr: #db00ff;
-  --text-color: #f1b2ce;
-  --heading-color: #ff0070;
-  --button-hover-color: #ff007066;
-  --decorative-bracket-color: #ff0070;
-  --menu-color: #ff0070;
-  --headers-color: #ff0070;
-  --rec-decoration-color: #ff0070;
-  --accent-clr: #ff8dcb;
-  --accent-clr-with-background: #353430;
-  --accent-heading-clr: #ffc2e6;
-  --text-clr: #353430;
-  --button-hover-clr: #32312d66;
-  --decorative-bracket-clr: #353430;
-  --menu-clr: #353430;
-  --rec-decoration-clr: transparent;
-  --heading-clr: #353430;
-
-  --rec-color: rgb(255, 0,112);
-  --decoration-color: rgb(255, 0,112);
+  --rec-color: rgb(255, 0, 112);
+  --decoration-color: rgb(255, 0, 112);
   --main-font: "IBM Plex mono";
-  --header-menu: rgb(53,52,48);
+  --header-menu: rgb(53, 52, 48);
   --visibility: hidden;
-  --section-text: rgb(53, 52,48);
+  --section-text: rgb(53, 52, 48);
   --heading-background: rgb(255, 141, 203);
   --title-color: rgb(255, 194, 230);
   --text-shadow: rgb(255, 0, 112);
@@ -309,7 +289,7 @@
 
   .header p {
     inline-size: 364px;
-    min-block-size: 117x;
+    min-block-size: 117px;
   }
 
   .title {
