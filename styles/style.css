@@ -1,28 +1,10 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой, здесь же писать медиавыажения для адаптива под разные экраны */
 
-:root {
-  --rec-color: rgb(255, 0, 112);
-  --decoration-color: rgb(255, 0, 112);
-  --main-font: "IBM Plex mono";
-  --header-menu: rgb(53, 52, 48);
-  --visibility: hidden;
-  --section-text: rgb(53, 52, 48);
-  --heading-background: rgb(255, 141, 203);
-  --title-color: rgb(255, 194, 230);
-  --text-shadow: rgb(255, 0, 112);
-  --background-image: url(../images/cover-image-light.png);
-  --main-title: rgb(53, 52, 48);
-  --heading-color: rgb(53, 52, 48);
-}
-
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-}
-
-.content-section {
   background-image: var(--background-image);
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; /* фиксируем изображение, чтобы не прокручивалось вместе с содержимым */
   background-size: cover;
 }
 
@@ -115,6 +97,11 @@
   border: none;
   outline: none;
   border-block-end: 1px solid var(--header-menu);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--outline-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-list {
@@ -250,6 +237,10 @@
 }
 
 .advices h3 {
+  margin-block-end: 19px;
+}
+
+.advices h4 {
   margin-block-end: 10px;
 }
 
@@ -292,8 +283,24 @@
     min-block-size: 117px;
   }
 
+  .rec {
+    top: 15px;
+    right: 10px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    left: 20px;
+    bottom: 20px;
+  }
+
   .title {
     font-size: 120px;
+    margin-inline-start: -20px;
   }
 
   .why {
@@ -305,6 +312,10 @@
   .why h2 {
     inline-size: 236px;
     min-block-size: 71px;
+  }
+
+  .why p {
+    inline-size: 472px;
   }
 
   .reasons h2 {
@@ -322,18 +333,16 @@
     gap: 20px;
   }
 
-  .advices h2 {
-    inline-size: 236px;
-    min-block-size: 80px;
-  }
-
-  .advices .div {
+  .advices p {
     inline-size: 472px;
-    min-block-size: 141px;
   }
 
   .gallery {
     padding: 0 20px 60px;
+  }
+
+  .gallery h2 {
+    margin-block-end: 20px;
   }
 
   .photo-grid {
@@ -341,9 +350,8 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
-    max-inline-size: 100%;
-    max-block-size: 100vh;
-    object-fit: cover;
+    inline-size: 728px;
+    block-size: 780px;
   }
 
   img:nth-child(1) {
@@ -351,6 +359,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    object-fit: cover;
+    object-position: center;
   }
 
   img:nth-child(2) {
@@ -359,6 +369,8 @@
     grid-row-start: 1;
     grid-row-end: 3;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   img:nth-child(3) {
@@ -367,6 +379,8 @@
     grid-row-start: 2;
     grid-row-end: 4;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   img:nth-child(4) {
@@ -374,6 +388,8 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    object-fit: cover;
+    object-position: center;
   }
 
   img:nth-child(5) {
@@ -381,6 +397,8 @@
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
+    object-fit: cover;
+    object-position: center;
   }
 
   .footer {
@@ -412,5 +430,26 @@
   .reasons ul {
     display: flex;
     flex-direction: row;
+  }
+
+  .why h2 {
+    width: 314.96px;
+  }
+
+  .why p {
+    inline-size: 648.92px;
+  }
+
+  .advices h2 {
+    inline-size: 315px;
+  }
+
+  .advices p {
+    inline-size: 649px;
+  }
+
+  .photo-grid {
+    inline-size: 984px;
+    block-size: 1048px;
   }
 }

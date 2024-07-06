@@ -2,3 +2,20 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  --rec-color: rgb(255, 0, 112);
+  --decoration-color: rgb(255, 0, 112);
+  --main-font: "IBM Plex mono";
+  --header-menu: rgb(53, 52, 48);
+  --visibility: hidden;
+  --section-text: rgb(53, 52, 48);
+  --heading-background: rgb(255, 141, 203);
+  --title-color: rgb(255, 194, 230);
+  --text-shadow: rgb(255, 0, 112);
+  --background-image: url(../images/cover-image-light.png);
+  --main-title: rgb(53, 52, 48);
+  --heading-color: rgb(53, 52, 48);
+  --main-font: "IBM Plex mono";
+  --outline-color: rgb(53, 52, 48);
+}

@@ -11,7 +11,6 @@
   */
   --rec-color: rgb(255, 0, 112);
   --decoration-color: rgb(255, 0, 112);
-  --main-font: "IBM Plex mono";
   --header-menu: rgb(255, 0, 112);
   --visibility: visible;
   --section-text: rgb(241, 178, 206);
@@ -21,6 +20,7 @@
   --background-image: url(../images/cover-image-dark.png);
   --main-title: rgb(255, 0, 112);
   --heading-color: rgb(0, 0, 40);
+  --outline-color: rgb(255, 0, 112);
 }
 
 @media (prefers-color-scheme: dark) {
