@@ -21,6 +21,7 @@
   --main-title: rgb(255, 0, 112);
   --heading-color: rgb(0, 0, 40);
   --outline-color: rgb(255, 0, 112);
+  --outline-hover-color: rgba(255, 0, 112, 0.4);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,5 +38,6 @@
     --background-image: url(../images/cover-image-dark.png);
     --main-title: rgb(255, 0, 112);
     --heading-color: rgb(0, 0, 40);
+    --outline-hover-color: rgba(255, 0, 112, 0.4);
   }
 }

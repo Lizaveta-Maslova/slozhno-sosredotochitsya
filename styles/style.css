@@ -89,7 +89,7 @@
 
 .header button:hover {
   border: none;
-  outline: 1px solid var(--header-menu);
+  outline: 1px solid var(--outline-hover-color);
   color: var(--header-menu);
 }
 
@@ -430,6 +430,14 @@
   .reasons ul {
     display: flex;
     flex-direction: row;
+  }
+
+  .reasons h2 {
+    inline-size: 315px;
+  }
+
+  .reasons p {
+    inline-size: 315px;
   }
 
   .why h2 {

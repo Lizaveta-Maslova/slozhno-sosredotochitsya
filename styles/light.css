@@ -20,6 +20,7 @@
   --background-image: url(../images/cover-image-light.png);
   --main-title: rgb(53, 52, 48);
   --heading-color: rgb(53, 52, 48);
+  --outline-hover-color: rgba(50, 49, 45, 0.4);
 }
 
 
@@ -37,5 +38,6 @@
     --background-image: url(../images/cover-image-light.png);
     --main-title: rgb(53, 52, 48);
     --heading-color: rgb(53, 52, 48);
+    --outline-hover-color:rgba(50, 49, 45, 0.4);
   }
 }
