@@ -39,5 +39,6 @@
     --main-title: rgb(255, 0, 112);
     --heading-color: rgb(0, 0, 40);
     --outline-hover-color: rgba(255, 0, 112, 0.4);
+    --outline-color: rgb(255, 0, 112);
   }
 }

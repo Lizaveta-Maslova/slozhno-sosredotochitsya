@@ -19,4 +19,5 @@
   --main-font: "IBM Plex mono";
   --outline-color: rgb(53, 52, 48);
   --outline-hover-color:rgba(50, 49, 45, 0.4);
+  --active-outline-color: rgb(53, 52, 48);
 }
